@@ -113,7 +113,11 @@ export default function Page() {
     <div className="min-h-screen bg-slate-100 text-slate-900 antialiased">
       <header className="sticky top-0 z-40 border-b border-slate-200/80 bg-white/90 backdrop-blur">
         <div className="mx-auto flex max-w-[1024px] items-center justify-between gap-4 px-4 py-4 md:px-6">
-          <div className="flex items-center gap-3">
+          <a
+            href="/"
+            aria-label="Go to Opttera home page"
+            className="flex items-center gap-3 motion-safe:transition motion-safe:duration-150 motion-reduce:transition-none hover:opacity-90"
+          >
             <Image
               src={logo}
               alt="Opttera logo"
@@ -125,7 +129,7 @@ export default function Page() {
             <p className="max-w-[290px] text-xs font-semibold leading-tight tracking-tight text-slate-900 sm:text-sm">
               Opttera<span className="mx-2 text-slate-400">•</span>Governed Analyst Intellegence Platform
             </p>
-          </div>
+          </a>
           <nav aria-label="Primary">
             <ul className="flex items-center gap-3 text-xs text-slate-700 sm:gap-4 sm:text-sm md:gap-6">
               <li>
