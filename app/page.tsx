@@ -227,15 +227,23 @@ export default function Page() {
                   <p className="mt-1 text-lg font-semibold text-slate-900">Active</p>
                 </div>
               </div>
-              <div className="w-full rounded-lg border border-slate-200 p-3">
-                <div className="grid min-w-[520px] grid-cols-[auto_1fr_auto_1fr_auto_1fr_auto] items-center gap-2 overflow-x-auto text-[11px] font-medium text-slate-600">
-                  <span className="rounded border border-slate-300 bg-slate-50 px-2 py-1 shadow-sm motion-safe:transition motion-safe:duration-150 motion-reduce:transition-none hover:-translate-y-0.5 hover:shadow-md">Ingest</span>
-                  <span className="h-px bg-slate-300" />
-                  <span className="rounded border border-slate-300 bg-slate-50 px-2 py-1 shadow-sm motion-safe:transition motion-safe:duration-150 motion-reduce:transition-none hover:-translate-y-0.5 hover:shadow-md">Structure</span>
-                  <span className="h-px bg-slate-300" />
-                  <span className="rounded border border-slate-300 bg-slate-50 px-2 py-1 shadow-sm motion-safe:transition motion-safe:duration-150 motion-reduce:transition-none hover:-translate-y-0.5 hover:shadow-md">Freeze</span>
-                  <span className="h-px bg-slate-300" />
-                  <span className="rounded border border-slate-300 bg-slate-50 px-2 py-1 shadow-sm motion-safe:transition motion-safe:duration-150 motion-reduce:transition-none hover:-translate-y-0.5 hover:shadow-md">Explain</span>
+              <div className="w-full rounded-lg border border-slate-200 px-3 pb-3 pt-4">
+                <div className="flow-sequence grid min-w-[520px] grid-cols-[auto_1fr_auto_1fr_auto_1fr_auto] items-center gap-2 overflow-x-auto overflow-y-visible py-1 text-[11px] font-medium text-slate-600">
+                  <span className="flow-node flow-node-1 rounded border border-slate-300 bg-slate-50 px-2 py-1 shadow-sm motion-safe:transition motion-safe:duration-150 motion-reduce:transition-none hover:-translate-y-0.5 hover:shadow-md">
+                    Ingest
+                  </span>
+                  <span className="flow-connector flow-connector-1 h-px bg-slate-300" />
+                  <span className="flow-node flow-node-2 rounded border border-slate-300 bg-slate-50 px-2 py-1 shadow-sm motion-safe:transition motion-safe:duration-150 motion-reduce:transition-none hover:-translate-y-0.5 hover:shadow-md">
+                    Structure
+                  </span>
+                  <span className="flow-connector flow-connector-2 h-px bg-slate-300" />
+                  <span className="flow-node flow-node-3 rounded border border-slate-300 bg-slate-50 px-2 py-1 shadow-sm motion-safe:transition motion-safe:duration-150 motion-reduce:transition-none hover:-translate-y-0.5 hover:shadow-md">
+                    Freeze
+                  </span>
+                  <span className="flow-connector flow-connector-3 h-px bg-slate-300" />
+                  <span className="flow-node flow-node-4 rounded border border-slate-300 bg-slate-50 px-2 py-1 shadow-sm motion-safe:transition motion-safe:duration-150 motion-reduce:transition-none hover:-translate-y-0.5 hover:shadow-md">
+                    Explain
+                  </span>
                 </div>
               </div>
             </div>
@@ -251,8 +259,21 @@ export default function Page() {
           </p>
           <div className="mt-5 grid grid-flow-col auto-cols-[minmax(220px,1fr)] gap-4 overflow-x-auto pb-1 md:auto-cols-fr">
             <article className="flex min-h-[176px] flex-col rounded-xl border border-slate-200 bg-white p-4 shadow-sm motion-safe:transition motion-safe:duration-200 motion-reduce:transition-none hover:-translate-y-1 hover:shadow-lg">
-              <span className="mx-auto mb-3 inline-flex h-10 w-10 items-center justify-center text-2xl font-semibold text-slate-600">
-                ◈
+              <span className="mx-auto mb-3 inline-flex h-11 w-11 items-center justify-center rounded-full border border-amber-200 bg-amber-50 text-amber-700 shadow-sm">
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  className="h-5 w-5"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <rect x="3" y="4" width="18" height="5" rx="1.5" />
+                  <rect x="3" y="10" width="18" height="5" rx="1.5" />
+                  <rect x="3" y="16" width="18" height="4" rx="1.5" />
+                </svg>
               </span>
               <p className="text-sm text-slate-800 md:text-base">
                 We turn messy documents and operational data into structured analyst outputs.
@@ -260,8 +281,20 @@ export default function Page() {
               <p className="mt-2 text-sm text-slate-600">The structure remains consistent across repeated reporting cycles.</p>
             </article>
             <article className="flex min-h-[176px] flex-col rounded-xl border border-slate-200 bg-white p-4 shadow-sm motion-safe:transition motion-safe:duration-200 motion-reduce:transition-none hover:-translate-y-1 hover:shadow-lg">
-              <span className="mx-auto mb-3 inline-flex h-10 w-10 items-center justify-center text-2xl font-semibold text-slate-600">
-                ◎
+              <span className="mx-auto mb-3 inline-flex h-11 w-11 items-center justify-center rounded-full border border-sky-200 bg-sky-50 text-sky-700 shadow-sm">
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  className="h-5 w-5"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M12 3 5 6v6c0 5 3.2 7.8 7 9 3.8-1.2 7-4 7-9V6l-7-3Z" />
+                  <path d="m9 12 2 2 4-4" />
+                </svg>
               </span>
               <p className="text-sm text-slate-800 md:text-base">
                 We produce results that can be traced, reproduced, and audited.
@@ -269,8 +302,22 @@ export default function Page() {
               <p className="mt-2 text-sm text-slate-600">Each output links back to evidence and processing context.</p>
             </article>
             <article className="flex min-h-[176px] flex-col rounded-xl border border-slate-200 bg-white p-4 shadow-sm motion-safe:transition motion-safe:duration-200 motion-reduce:transition-none hover:-translate-y-1 hover:shadow-lg">
-              <span className="mx-auto mb-3 inline-flex h-10 w-10 items-center justify-center text-2xl font-semibold text-slate-600">
-                ⎇
+              <span className="mx-auto mb-3 inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-300 bg-slate-100 text-slate-700 shadow-sm">
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  className="h-5 w-5"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <circle cx="6" cy="6" r="2" />
+                  <circle cx="18" cy="6" r="2" />
+                  <circle cx="12" cy="18" r="2" />
+                  <path d="M8 6h8M7.2 7.5 10.8 16M16.8 7.5 13.2 16" />
+                </svg>
               </span>
               <p className="text-sm text-slate-800 md:text-base">
                 We keep a clear separation between numbers, rules, and narrative.
@@ -278,15 +325,41 @@ export default function Page() {
               <p className="mt-2 text-sm text-slate-600">This makes review and change control straightforward.</p>
             </article>
             <article className="flex min-h-[176px] flex-col rounded-xl border border-slate-200 bg-white p-4 shadow-sm motion-safe:transition motion-safe:duration-200 motion-reduce:transition-none hover:-translate-y-1 hover:shadow-lg">
-              <span className="mx-auto mb-3 inline-flex h-10 w-10 items-center justify-center text-2xl font-semibold text-slate-600">
-                ≠
+              <span className="mx-auto mb-3 inline-flex h-11 w-11 items-center justify-center rounded-full border border-emerald-200 bg-emerald-50 text-emerald-700 shadow-sm">
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  className="h-5 w-5"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M5 18h14" />
+                  <path d="M5 14h4l2-3 3 2 2-4 3 2" />
+                  <path d="M7 4h10v4H7z" />
+                </svg>
               </span>
               <p className="text-sm text-slate-800 md:text-base">We do not invent figures.</p>
               <p className="mt-2 text-sm text-slate-600">Quantitative statements are derived only from validated inputs.</p>
             </article>
             <article className="flex min-h-[176px] flex-col rounded-xl border border-slate-200 bg-white p-4 shadow-sm motion-safe:transition motion-safe:duration-200 motion-reduce:transition-none hover:-translate-y-1 hover:shadow-lg">
-              <span className="mx-auto mb-3 inline-flex h-10 w-10 items-center justify-center text-2xl font-semibold text-slate-600">
-                ⛔
+              <span className="mx-auto mb-3 inline-flex h-11 w-11 items-center justify-center rounded-full border border-rose-200 bg-rose-50 text-rose-700 shadow-sm">
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  className="h-5 w-5"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M5 9a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v5a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3V9Z" />
+                  <path d="M9 17v2h6v-2" />
+                  <path d="M7 7 17 17" />
+                </svg>
               </span>
               <p className="text-sm text-slate-800 md:text-base">
                 We do not let language models generate quantitative outputs.
@@ -335,23 +408,27 @@ export default function Page() {
           <div className="mt-5 overflow-x-auto pb-1">
             <div className="min-w-[860px]">
               <div
-                className="grid grid-cols-[auto_1fr_auto_1fr_auto_1fr_auto] items-center gap-2 px-2"
+                className="how-flow-sequence grid grid-cols-[auto_1fr_auto_1fr_auto_1fr_auto] items-center gap-2 px-2"
                 aria-hidden="true"
               >
                 {steps.map((step, index) => (
                   <div key={`${step.title}-track`} className="contents">
-                    <span className="flex h-8 w-8 items-center justify-center rounded-full border border-slate-300 bg-white text-xs font-semibold text-slate-700 shadow-sm">
+                    <span
+                      className={`how-flow-node how-flow-node-${index + 1} flex h-8 w-8 items-center justify-center rounded-full border border-slate-300 bg-white text-xs font-semibold text-slate-700 shadow-sm`}
+                    >
                       {index + 1}
                     </span>
-                    {index < steps.length - 1 ? <span className="h-px bg-slate-300" /> : null}
+                    {index < steps.length - 1 ? (
+                      <span className={`how-flow-connector how-flow-connector-${index + 1} h-px bg-slate-300`} />
+                    ) : null}
                   </div>
                 ))}
               </div>
               <ol className="mt-4 grid grid-cols-4 gap-4">
-                {steps.map((step) => (
+                {steps.map((step, index) => (
                   <li
                     key={step.title}
-                    className="rounded-xl border border-slate-200 bg-white p-5 text-sm text-slate-800 shadow-sm motion-safe:transition motion-safe:duration-200 motion-reduce:transition-none hover:-translate-y-0.5 hover:shadow-md md:p-6 md:text-base"
+                    className={`how-step-card how-step-card-${index + 1} rounded-xl border border-slate-200 bg-white p-5 text-sm text-slate-800 shadow-sm motion-safe:transition motion-safe:duration-200 motion-reduce:transition-none hover:-translate-y-0.5 hover:shadow-md md:p-6 md:text-base`}
                   >
                     <h3 className="mb-2 text-sm font-semibold text-slate-900 md:text-base">{step.title}</h3>
                     <p>{step.body}</p>
